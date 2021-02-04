@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9efe2f86-8f55-405e-ac1e-94368056ffbb" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="ProjectId" id="1o0Qsh7kOhcgO9MZEr3HLRrD3Rp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\mvc_chat\vendor" />
+      <recent name="C:\OpenServer\domains\mvc_chat" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\mvc_chat\configs" />
+      <recent name="C:\OpenServer\domains\mvc_chat\vendor" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9efe2f86-8f55-405e-ac1e-94368056ffbb" name="Default Changelist" comment="" />
+      <created>1612421236342</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612421236342</updated>
+      <workItem from="1612421237453" duration="1193000" />
+      <workItem from="1612422472323" duration="1774000" />
+      <workItem from="1612424308035" duration="1776000" />
+      <workItem from="1612426132205" duration="1778000" />
+      <workItem from="1612428134581" duration="1771000" />
+      <workItem from="1612429953538" duration="1774000" />
+      <workItem from="1612431851301" duration="1786000" />
+      <workItem from="1612433684968" duration="1768000" />
+      <workItem from="1612435497013" duration="1773000" />
+      <workItem from="1612457169252" duration="619000" />
+      <workItem from="1612462510611" duration="3724000" />
+      <workItem from="1612466302656" duration="1771000" />
+      <workItem from="1612468157281" duration="1767000" />
+      <workItem from="1612469978814" duration="1767000" />
+      <workItem from="1612471811944" duration="1706000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
