@@ -19,7 +19,9 @@ class View {
     }
 
 	public function render($view, $title, $vars = []) {
-		extract($vars);
+
+        extract($vars);
+
         $this->path = VIEWS.implode(DIRECTORY_SEPARATOR,explode('.',$view)).".php";
 
 		if (file_exists($this->path)) {

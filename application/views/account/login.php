@@ -1,8 +1,33 @@
-<h3>Вход</h3>
-<form action="/account/login" method="post">
-	<p>Логин</p>
-	<p><input type="text" name="login"></p>
-	<p>Пароль</p>
-	<p><input type="text" name="password"></p>
-	<b><button type="submit" name="enter">Вход</button></b>
-</form>
+<div id="contact" class="contact" style="margin:80px 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Login</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-1 mx-auto">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
+                        <form>
+                            <div class="row">
+
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <input class="form-control" placeholder="Email" type="text" name="Email">
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <input class="form-control" placeholder="Password" type="password" name="password">
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <a href="#">Login</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

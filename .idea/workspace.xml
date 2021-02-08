@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9efe2f86-8f55-405e-ac1e-94368056ffbb" name="Default Changelist" comment="" />
+    <list default="true" id="9efe2f86-8f55-405e-ac1e-94368056ffbb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/account/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/account/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/account/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/account/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/layouts/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/layouts/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/main/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/main/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/core/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/core/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/core/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/core/View.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/lib/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/lib/Db.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,7 +21,11 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1o0Qsh7kOhcgO9MZEr3HLRrD3Rp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -19,7 +34,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MVC1" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -60,7 +75,29 @@
       <workItem from="1612466302656" duration="1771000" />
       <workItem from="1612468157281" duration="1767000" />
       <workItem from="1612469978814" duration="1767000" />
-      <workItem from="1612471811944" duration="1706000" />
+      <workItem from="1612471811944" duration="5029000" />
+      <workItem from="1612511767300" duration="7161000" />
+      <workItem from="1612519017564" duration="333000" />
+      <workItem from="1612725563353" duration="2584000" />
+      <workItem from="1612728907866" duration="1777000" />
+      <workItem from="1612730724568" duration="719000" />
+      <workItem from="1612734267011" duration="1884000" />
+      <workItem from="1612736738351" duration="479000" />
+      <workItem from="1612768593985" duration="1779000" />
+      <workItem from="1612770446428" duration="1737000" />
+      <workItem from="1612772431063" duration="1820000" />
+      <workItem from="1612774289722" duration="1808000" />
+      <workItem from="1612776469295" duration="1101000" />
+      <workItem from="1612778297000" duration="1774000" />
+      <workItem from="1612780112283" duration="1432000" />
+      <workItem from="1612782394815" duration="1357000" />
+      <workItem from="1612774108470" duration="1778000" />
+      <workItem from="1612775925681" duration="211000" />
+      <workItem from="1612787306952" duration="1672000" />
+      <workItem from="1612789064620" duration="1693000" />
+      <workItem from="1612803907176" duration="1754000" />
+      <workItem from="1612805727196" duration="1752000" />
+      <workItem from="1612807596904" duration="290000" />
     </task>
     <servers />
   </component>
