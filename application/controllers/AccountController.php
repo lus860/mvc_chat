@@ -33,14 +33,13 @@ class AccountController extends Controller {
                 } else {
                     $data['password_error'] = 'Password or email is incorrect. Please try again.';
 
-                    $this->view->render('account.login','Login',$data);
+                    return $this->view->render('account.login','Login',$data);
                 }
-
             }
-
+            $result = array_merge($error, $data);
         }
 
-        $this->view->render('account.login','Login');
+        $this->view->render('account.login','Login', $result);
 	}
 
     public function registerAction() {
@@ -73,7 +72,10 @@ class AccountController extends Controller {
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
                 try {
                     $this->model->insert($data);
-                    header('location: ' . URL_ROOT . '/account/login');
+//                    $_SESSION['success'] = 'Registration Successful. Please Login';
+                    $_SESSION['success'] = array('mess' => 'Registration Successful. Please Login', 'registered' => time());
+
+                    $this->view->redirect('/account/login');
                 }catch (Exception $e){
                     $e->getMessage();
 
@@ -146,7 +148,7 @@ class AccountController extends Controller {
         unset($_SESSION['user_id']);
         unset($_SESSION['first_name']);
         unset($_SESSION['email']);
-        header('location:' . URL_ROOT . '/account/login');
+        $this->view->redirect('/account/login');
     }
 
 }

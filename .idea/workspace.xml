@@ -2,26 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9efe2f86-8f55-405e-ac1e-94368056ffbb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/controllers/MessageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/controllers/ProfileController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/message/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/profile/edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/profile/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/AccountController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/ProfileController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/Account.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/account/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/account/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/account/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/account/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/layouts/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/layouts/default.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/main/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/main/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/profile/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/profile/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configs/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/configs/constants.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/configs/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/core/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/core/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/lib/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/lib/Db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/core/Router.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +36,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../paraton" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MVC1" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -141,6 +133,26 @@
       <workItem from="1612997137120" duration="1764000" />
       <workItem from="1612998945715" duration="2113000" />
       <workItem from="1613001106897" duration="783000" />
+      <workItem from="1613045746354" duration="1744000" />
+      <workItem from="1613047529159" duration="1775000" />
+      <workItem from="1613049352213" duration="906000" />
+      <workItem from="1613051309167" duration="1775000" />
+      <workItem from="1613053120548" duration="5523000" />
+      <workItem from="1613058795283" duration="562000" />
+      <workItem from="1613059840712" duration="795000" />
+      <workItem from="1613062609201" duration="1768000" />
+      <workItem from="1613064432721" duration="1772000" />
+      <workItem from="1613066248826" duration="1791000" />
+      <workItem from="1613068095375" duration="1763000" />
+      <workItem from="1613069913651" duration="1762000" />
+      <workItem from="1613071742323" duration="1764000" />
+      <workItem from="1613073570946" duration="1728000" />
+      <workItem from="1613075414740" duration="1766000" />
+      <workItem from="1613077239022" duration="1768000" />
+      <workItem from="1613079061087" duration="1768000" />
+      <workItem from="1613080880872" duration="1768000" />
+      <workItem from="1613082722284" duration="1769000" />
+      <workItem from="1613084537120" duration="1770000" />
     </task>
     <servers />
   </component>

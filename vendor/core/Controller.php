@@ -15,6 +15,7 @@ abstract class Controller {
 		$this->route = $route;
         $this->view = new View();
 		$this->model = $this->loadModel($route['controller']);
+		$this->unsetSession();
 	}
 
 	public function loadModel($name)
@@ -25,5 +26,13 @@ abstract class Controller {
 		}
 	}
 
+    public function unsetSession()
+    {
+        if (isset($_SESSION['success'])) {
+            if ((time() - $_SESSION['success']['registered']) > (5)) {
+                unset($_SESSION['success']);
+            }
+        }
+    }
 
 }

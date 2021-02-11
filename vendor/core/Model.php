@@ -13,16 +13,24 @@ abstract class Model {
     protected $stmt = '';
     protected $selectFlag = false;
 
-	public function __construct($route)
+	public function __construct()
     {
         $config = CONFIG_DB;
         $this->db = new PDO('mysql:host='.$config['host'].';dbname='.$config['name'].'', $config['user'], $config['password']);
-        $this->table = lcfirst($route["controller"])."s";
+        //$this->table = lcfirst($route["controller"])."s";
+        $this->table = $this->getTable();
 	}
 
     public function setTable($table)
     {
         $this->table = $table;
+    }
+
+    public function getTable()
+    {
+        $class = get_class($this);
+        $classArr = explode('\\', $class);
+        return lcfirst(end($classArr))."s";
     }
 
     public function insert($data)
@@ -67,7 +75,8 @@ abstract class Model {
     public function find($id)
     {
         $this->stmt = $this->db->prepare("SELECT * FROM $this->table WHERE id = '$id' ");
-        return $this->stmt->execute();
+        $this->stmt->execute();
+        return $this->stmt->fetch(PDO::FETCH_ASSOC);
 
     }
 
@@ -127,7 +136,7 @@ abstract class Model {
     {
         $this->selectFlag = false;
         $condArr1 = [];
-        foreach ($data1 as $field => $value){
+        foreach ($data1 as $field => $value) {
             $condArr1[] = "$field='$value'";
         }
         $condStr1 = implode(' , ',$condArr1);

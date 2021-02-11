@@ -4,27 +4,38 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="container emp-profile" style="margin-top: 150px;margin-bottom: 50px!important;">
-    <form method="post" action="profile/edit">
+    <?php if(isset($errors)) {
+        foreach ($errors as $error) {?>
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <?php echo $error ?>
+    </div>
+    <?php } }?>
+
+    <form action="<?php echo URL_ROOT.'/profile/edit'?>" method="POST" enctype="multipart/form-data" >
         <div class="row">
             <div class="col-md-4">
                 <div class="profile-img">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                    <img src="<?php if(!empty($_SESSION['prof_img']) && file_exists('images\profile\\'.$_SESSION['prof_img'])){ echo 'images\profile\\'.$_SESSION['prof_img'];} else{ echo "images\profile\default.jpg"; }?>" alt="img"/>
                     <div class="file btn btn-lg btn-primary">
                         Change Photo
-                        <input type="file" name="file"/>
+                        <input type="file" name="image">
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="profile-head">
-                    <h5>
-                        Kshiti Ghelani
-                    </h5>
-                    <h4 class="proile-rating" style="color: #000!important;">Email : <span>email@gmail.com</span></h4>
+                    <?php if(isset($_SESSION['first_name'])):?>
+                    <h5 ><span><?php echo 'First Name: '.$_SESSION['first_name']?></span></h5>
+                    <?php endif;?>
+                    <?php if(isset($_SESSION['last_name'])):?>
+                        <h5><span><?php echo 'Last Name: '. $_SESSION['last_name']?></span></h5>
+                    <?php endif;?>
+                    <h4 class="proile-rating" style="color: #000!important;">Email: <span><?php if(isset($_SESSION['email'])) echo $_SESSION['email']?></span></h4>
                 </div>
             </div>
             <div class="col-md-2">
-                <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                <input type="submit" class="profile-edit-btn" name="submit" value="Edit Profile"/>
             </div>
         </div>
     </form>

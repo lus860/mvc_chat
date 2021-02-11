@@ -7,15 +7,15 @@
                     <div class="row marginii">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <div class="carousel-caption ">
-                                <h1>First Name Last Name</h1>
-                                <h3><strong class="color">Email</strong></h3>
+                                <h1><?php if(isset($_SESSION['first_name'])) echo $_SESSION['first_name'].' ' ; if(isset($_SESSION['last_name'])) echo $_SESSION['last_name'] ?></h1>
+                                <h3>Email: <strong class="color"><?php if(isset($_SESSION['email'])) echo $_SESSION['email']?></strong></h3>
                                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
-                                <a class="btn btn-lg btn-primary" href="/profile/" role="button">Edit Profile</a>
+                                <a class="btn btn-lg btn-primary" href="/profile<?php if(isset($_SESSION['user_id']))echo'?id='.$_SESSION['user_id']?>" role="button">Edit Profile</a>
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <div class="img-box">
-                                <figure><img src="/images/gyufyufyu.png" alt="img"/></figure>
+                                <figure><img src="<?php if(!empty($_SESSION['prof_img']) && file_exists('images\profile\\'.$_SESSION['prof_img'])){ echo 'images\profile\\'.$_SESSION['prof_img'];} else{ echo "images\profile\default.jpg"; }?>" alt="img" style="width: 100%"></figure>
                             </div>
                         </div>
                     </div>

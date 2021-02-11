@@ -23,19 +23,27 @@ class Account extends Model {
     public function login($email, $password) {
         $row = $this->select()->where(['email' => $email])->single();
 
-        $hashedPassword = $row["password"];
-
-        if (password_verify($password, $hashedPassword)) {
-            return $row;
-        } else {
-            return false;
+        if ($row) {
+            $hashedPassword = $row["password"];
+            if (password_verify($password, $hashedPassword)) {
+                return $row;
+            } else {
+                return false;
+            }
         }
+        //debug($row);
+        return false;
     }
 
     public function createUserSession($user) {
         $_SESSION['user_id'] = $user["id"];
         $_SESSION['first_name'] = $user["first_name"];
+        $_SESSION['last_name'] = $user["last_name"];
         $_SESSION['email'] = $user["email"];
+        if ($user["prof_img"]) {
+            $_SESSION['prof_img'] = $user["prof_img"];
+        }
+        $_SESSION['success'] = array('mess' => 'You are logged in', 'registered' => time());
         header('location:' . URL_ROOT . '/');
     }
 

@@ -366,7 +366,7 @@
                                     <?php
                                     if (isset($_SESSION['user_id'])) {?>
                                         <li><a href="/account/logout">Logout</a></li>
-                                        <li><a href="/account/register" style="color: #308409;"><?php echo $_SESSION['first_name'] ?></a></li>
+                                        <li><a href="/profile<?php if(isset($_SESSION['user_id']))echo'?id='.$_SESSION['user_id'] ?>" style="color: #308409;"><?php if(isset($_SESSION['first_name']))  echo $_SESSION['first_name'] ?></a></li>
                                     <?php }else { ?>
                                     <li><a href="/account/login">Login</a></li>
                                     <li><a href="/account/register">Register</a></li>
@@ -381,7 +381,13 @@
     </div>
     <!-- end header inner -->
 </header>
-<!-- end header -->
+<?php if(isset($_SESSION['success'])) {?>
+        <div class="alert alert-success" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <?php echo $_SESSION['success']['mess'] ?>
+        </div>
+<?php  }?>
+
 <?php echo $content; ?>
     <footer>
         <div id="contact" class="footer">
@@ -446,6 +452,12 @@
                 $('.action_menu').toggle();
             });
         });
+
+        window.setTimeout(function() {
+            $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                $(this).remove();
+            });
+        }, 4000);
 
 
     </script>

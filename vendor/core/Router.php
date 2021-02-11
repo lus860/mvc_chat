@@ -23,6 +23,16 @@ class Router {
 
     public function match() {
         $url = trim($_SERVER['REQUEST_URI'], '/');
+        $query = parse_url($url, PHP_URL_QUERY);
+        $url = parse_url($url, PHP_URL_PATH);
+        if ($query) {
+            $item_query = explode("&", $query);
+            foreach ($item_query as $val) {
+                $param = explode("=", $val);
+                $_GET[$param[0]] = $param[1];
+
+            }
+        }
         foreach ($this->routes as $route => $params) {
             if (preg_match($route, $url, $matches)) {
                 $this->params = $params;
@@ -40,8 +50,10 @@ class Router {
             if (class_exists($path)) {
                 $action = $this->params['action'].'Action';
                 if (method_exists($path, $action)) {
+
                     $controller = new $path($this->params);
                     $controller->$action();
+
                 } else {
                     View::errorCode(404);
                 }
