@@ -13,6 +13,4 @@ class Db {
         $this->db = new PDO('mysql:host='.$config['host'].';dbname='.$config['name'].'', $config['user'], $config['password']);
     }
 
-
-
 }

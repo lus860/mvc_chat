@@ -3,18 +3,21 @@
 namespace vendor\core;
 
 use vendor\lib\Db;
+use PDO;
 
 abstract class Model {
 
 	public $db;
     protected $table = '';
     protected $sql = '';
+    protected $stmt = '';
     protected $selectFlag = false;
 
-	public function __construct()
+	public function __construct($route)
     {
-		$this->db = new Db;
-        $this->table = lcfirst(get_class($this))."s";
+        $config = CONFIG_DB;
+        $this->db = new PDO('mysql:host='.$config['host'].';dbname='.$config['name'].'', $config['user'], $config['password']);
+        $this->table = lcfirst($route["controller"])."s";
 	}
 
     public function setTable($table)
@@ -29,18 +32,17 @@ abstract class Model {
         if (!empty($data)) {
             foreach ($data as $field => $value) {
                 $fieldsArray[] = "$field";
-                $valuesArray[] = "':$value'";
+                $valuesArray[] = ":$field";
             }
             $fieldsStr = implode(',', $fieldsArray);
             $valuesStr = implode(',', $valuesArray);
             $this->sql = "INSERT INTO  $this->table ($fieldsStr) VALUES ($valuesStr)";
-            $stmt = $this->db->prepare($this->sql);
+            $this->stmt = $this->db->prepare($this->sql);
 
-            foreach ($data as $key => $val) {
-                $stmt->bindValue(':' . $key, $val);
-            }
+            $this->stmt->execute($data);
         }
-        $stmt->execute();
+
+
     }
 
     public function select($what = "*")
@@ -64,8 +66,8 @@ abstract class Model {
 
     public function find($id)
     {
-        $stmt = $this->db->prepare("SELECT * FROM $this->table WHERE id = '$id' ");
-        return $stmt->execute();
+        $this->stmt = $this->db->prepare("SELECT * FROM $this->table WHERE id = '$id' ");
+        return $this->stmt->execute();
 
     }
 
@@ -136,20 +138,35 @@ abstract class Model {
 
     }
 
+
     public function get()
     {
-        $stmt = $this->db->prepare($this->sql);
-        return $stmt->execute();
+        $this->stmt = $this->db->prepare($this->sql);
+        $this->stmt->execute();
     }
 
-    public function row()
+    public function rowCount()
     {
-        return $this->get()->fetchAll(PDO::FETCH_ASSOC);
+        $this->get();
+        return $this->stmt->rowCount();
     }
 
     public function column()
     {
-        return $this->get()->fetchColumn();
+        $this->get();
+        return $this->stmt->fetchColumn();
     }
+
+    public function resultSet() {
+        $this->get();
+        return $this->stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    //Return a specific row as an object
+    public function single() {
+        $this->get();
+        return $this->stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
 
 }

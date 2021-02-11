@@ -1,59 +1,16 @@
 <!-- end header -->
 <section >
     <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#main_slider" data-slide-to="0" class="active"></li>
-            <li data-target="#main_slider" data-slide-to="1"></li>
-            <li data-target="#main_slider" data-slide-to="2"></li>
-        </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="container">
                     <div class="row marginii">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <div class="carousel-caption ">
-                                <h1>Welcome To The <strong class="color">Nutrients Plants</strong></h1>
+                                <h1>First Name Last Name</h1>
+                                <h3><strong class="color">Email</strong></h3>
                                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
-                                <a class="btn btn-lg btn-primary" href="#" role="button">About</a>
-                                <a class="btn btn-lg btn-primary" href="#" role="button">Contact US</a>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                            <div class="img-box">
-                                <figure><img src="/images/gyufyufyu.png" alt="img"/></figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="row marginii">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                            <div class="carousel-caption ">
-                                <h1>Welcome To The <strong class="color">Nutrients Plants</strong></h1>
-                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
-                                <a class="btn btn-lg btn-primary" href="#" role="button">About</a>
-                                <a class="btn btn-lg btn-primary" href="#" role="button">Contact US</a>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                            <div class="img-box ">
-                                <figure><img src="/images/gyufyufyu.png" alt="img"/></figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="row marginii">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                            <div class="carousel-caption ">
-                                <h1>Welcome To The <strong class="color">Nutrients Plants</strong></h1>
-                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
-                                <a class="btn btn-lg btn-primary" href="#" role="button">About</a>
-                                <a class="btn btn-lg btn-primary" href="#" role="button">Contact US</a>
+                                <a class="btn btn-lg btn-primary" href="/profile/" role="button">Edit Profile</a>
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -65,11 +22,6 @@
                 </div>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
-            <i class='fa fa-angle-left'></i></a>
-        <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
-            <i class='fa fa-angle-right'></i>
-        </a>
     </div>
 </section>
 <!-- plant -->
@@ -78,7 +30,7 @@
         <div class="row">
             <div class="col-md-12 ">
                 <div class="titlepage">
-                    <h2>Our Wonderful plants</h2>
+                    <h2>All profile</h2>
                     <span>looking at its layout. The point of using Lorem Ipsumletters, as opposed to usingl</span>
                 </div>
             </div>
@@ -89,43 +41,53 @@
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="plants-box">
                     <figure><img src="/images/plant1.jpg" alt="img"/></figure>
-                    <h3> Floral Vibrant</h3>
+                    <h3> First Name <br>Last Name</h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+                    <a class="btn btn-lg btn-primary" href="message/" role="button" style="max-width: 200px">send a message</a>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="plants-box">
                     <figure><img src="/images/plant2.jpg" alt="img"/></figure>
-                    <h3> Floral Vibrant</h3>
+                    <h3> First Name <br>Last Name</h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+                    <a class="btn btn-lg btn-primary" href="message/" role="button" style="max-width: 200px">send a message</a>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="plants-box">
                     <figure><img src="/images/plant3.jpg" alt="img"/></figure>
-                    <h3> Floral Vibrant</h3>
+                    <h3> First Name <br>Last Name</h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+                    <a class="btn btn-lg btn-primary" href="message/" role="button" style="max-width: 200px">send a message</a>
+
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="plants-box">
                     <figure><img src="/images/plant1.jpg" alt="img"/></figure>
-                    <h3> Floral Vibrant</h3>
+                    <h3> First Name <br>Last Name</h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+                    <a class="btn btn-lg btn-primary" href="message/" role="button" style="max-width: 200px">send a message</a>
+
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="plants-box">
                     <figure><img src="/images/plant2.jpg" alt="img"/></figure>
-                    <h3> Floral Vibrant</h3>
+                    <h3> First Name <br>Last Name</h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+                    <a class="btn btn-lg btn-primary" href="message/" role="button" style="max-width: 200px">send a message</a>
+
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="plants-box">
                     <figure><img src="/images/plant3.jpg" alt="img"/></figure>
-                    <h3> Floral Vibrant</h3>
+                    <h3> First Name <br>Last Name</h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+                    <a class="btn btn-lg btn-primary" href="message/" role="button" style="max-width: 200px">send a message</a>
+
                 </div>
             </div>
         </div>
@@ -138,27 +100,13 @@
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                    <div class="about-box">
-                        <h2>50</h2>
-                        <div class="white-bg">
-                            <span>Satisfaction</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                    <div class="about-box">
-                        <h2>50</h2>
-                        <div class="white-bg">
-                            <span>Free Delivery</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                    <div class="about-box">
-                        <h2>50</h2>
-                        <div class="white-bg">
-                            <span>Store Locators</span>
-                        </div>
+                    <div class="Nursery-img">
+                        <figure>
+                            <img src="/images/contactimg.jpg" alt="img"/>
+                            <div class="text-box">
+                                <h3>Best Green Nursery</h3>
+                            </div>
+                        </figure>
                     </div>
                 </div>
             </div>
@@ -183,7 +131,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="titlepage">
-                    <h2>Our Gallery </h2>
+                    <h2>Our Album</h2>
                 </div>
             </div>
         </div>

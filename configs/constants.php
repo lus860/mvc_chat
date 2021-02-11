@@ -1,4 +1,11 @@
 <?php
+//Database params
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', 'root');
+define('DB_NAME', 'mvc_chat');
+
+define('URL_ROOT', 'http://chat.loc/');
 
 define("BASE_URL",dirname(__DIR__));
 define("CONFIGS",BASE_URL.DIRECTORY_SEPARATOR."configs".DIRECTORY_SEPARATOR);

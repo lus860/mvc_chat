@@ -8,7 +8,7 @@ class HomeController extends Controller {
 
 	public function indexAction() {
 
-		$this->view->render('main.index','Главная страница',['name'=>'alex', 'kkk'=> 'hhh']);
+		$this->view->render('main.index','Home page',['name'=>'alex', 'kkk'=> 'hhh']);
 	}
 
 }

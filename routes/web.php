@@ -17,4 +17,24 @@ return [
         'action' => 'register',
     ],
 
+    'account/logout' => [
+        'controller' => 'account',
+        'action' => 'logout',
+    ],
+
+    'profile' => [
+        'controller' => 'profile',
+        'action' => 'index',
+    ],
+
+    'profile/edit' => [
+        'controller' => 'profile',
+        'action' => 'edit',
+    ],
+
+    'message' => [
+        'controller' => 'message',
+        'action' => 'index',
+    ],
+
 ];
