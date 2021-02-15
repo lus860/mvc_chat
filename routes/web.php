@@ -32,9 +32,19 @@ return [
         'action' => 'edit',
     ],
 
+    'profile/album' => [
+        'controller' => 'profile',
+        'action' => 'album',
+    ],
+
     'message' => [
         'controller' => 'message',
         'action' => 'index',
+    ],
+
+    'message/create' => [
+        'controller' => 'message',
+        'action' => 'createChat',
     ],
 
 ];

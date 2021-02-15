@@ -387,6 +387,12 @@
             <?php echo $_SESSION['success']['mess'] ?>
         </div>
 <?php  }?>
+<?php if(isset($_SESSION['error'])) {?>
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <?php echo $_SESSION['error']['mess'] ?>
+    </div>
+<?php  }?>
 
 <?php echo $content; ?>
     <footer>
@@ -458,6 +464,41 @@
                 $(this).remove();
             });
         }, 4000);
+
+        $(function(){
+            $("#btn_message").click(function(event) {
+                $("#message_error").text('');
+                var message = $("#message").val().trim();
+                var formData = {
+                    'message': message,
+                    'id': <?php echo $_GET['id']?>
+                };
+                if(message.length > 0 ) {
+                    $.ajax({
+                        url: "message/create",
+                        type: "post",
+                        dataType: "HTML",
+                        data: formData,
+                        success: function(d) {
+                            if(JSON.parse(d).success) {
+                                $("#message").val('');
+                                $("#msg_cotainer").html(message +'<span class="msg_time">'+ JSON.parse(d).time +'</span>');
+                                $("#new_message").css('display','block');
+                                console.log(d)
+                            }
+
+                        },
+                        error: function(d) {
+                            console.log(d);
+                        }
+                    });
+                } else {
+                    $("#message_error").text('Please enter a message');
+                    return false
+                }
+
+            });
+        })
 
 
     </script>

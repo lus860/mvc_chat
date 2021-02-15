@@ -72,7 +72,6 @@ class AccountController extends Controller {
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
                 try {
                     $this->model->insert($data);
-//                    $_SESSION['success'] = 'Registration Successful. Please Login';
                     $_SESSION['success'] = array('mess' => 'Registration Successful. Please Login', 'registered' => time());
 
                     $this->view->redirect('/account/login');
@@ -80,11 +79,7 @@ class AccountController extends Controller {
                     $e->getMessage();
 
                 }
-//                if ($this->model->insert($data)) {
-//                    header('location: ' . URL_ROOT . '/account/login');
-//                } else {
-//                    die('Something went wrong.');
-//                }
+
             }
             $result = array_merge($error, $data);
         }
@@ -147,7 +142,9 @@ class AccountController extends Controller {
     public function logoutAction() {
         unset($_SESSION['user_id']);
         unset($_SESSION['first_name']);
+        unset($_SESSION['last_name']);
         unset($_SESSION['email']);
+        unset($_SESSION['prof_img']);
         $this->view->redirect('/account/login');
     }
 

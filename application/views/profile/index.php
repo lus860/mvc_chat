@@ -11,12 +11,18 @@
         <?php echo $error ?>
     </div>
     <?php } }?>
+    <?php if(isset($_SESSION['errors'])) {?>
+        <div class="alert alert-danger" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <?php echo $_SESSION['errors']['mess'] ?>
+        </div>
+    <?php  }?>
 
     <form action="<?php echo URL_ROOT.'/profile/edit'?>" method="POST" enctype="multipart/form-data" >
         <div class="row">
             <div class="col-md-4">
                 <div class="profile-img">
-                    <img src="<?php if(!empty($_SESSION['prof_img']) && file_exists('images\profile\\'.$_SESSION['prof_img'])){ echo 'images\profile\\'.$_SESSION['prof_img'];} else{ echo "images\profile\default.jpg"; }?>" alt="img"/>
+                    <img src="<?php if(!empty($_SESSION['prof_img']) && file_exists(IMAGES.'profile\\'.$_SESSION['prof_img'])){ echo '\images\profile\\'.$_SESSION['prof_img'];} else{ echo "\images\profile\default.jpg"; }?>" alt="img"/>
                     <div class="file btn btn-lg btn-primary">
                         Change Photo
                         <input type="file" name="image">

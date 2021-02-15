@@ -7,15 +7,20 @@
                     <div class="row marginii">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <div class="carousel-caption ">
+                                <?php if(isset($_SESSION['user_id'])){?>
                                 <h1><?php if(isset($_SESSION['first_name'])) echo $_SESSION['first_name'].' ' ; if(isset($_SESSION['last_name'])) echo $_SESSION['last_name'] ?></h1>
                                 <h3>Email: <strong class="color"><?php if(isset($_SESSION['email'])) echo $_SESSION['email']?></strong></h3>
                                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
                                 <a class="btn btn-lg btn-primary" href="/profile<?php if(isset($_SESSION['user_id']))echo'?id='.$_SESSION['user_id']?>" role="button">Edit Profile</a>
+                                <?php } else { ?>
+                                    <h1>Please register to create a profile</h1>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
+                                <?php } ?>
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <div class="img-box">
-                                <figure><img src="<?php if(!empty($_SESSION['prof_img']) && file_exists('images\profile\\'.$_SESSION['prof_img'])){ echo 'images\profile\\'.$_SESSION['prof_img'];} else{ echo "images\profile\default.jpg"; }?>" alt="img" style="width: 100%"></figure>
+                                <figure><img src="<?php if(!empty($_SESSION['prof_img']) && file_exists('images\profile\\'.$_SESSION['prof_img'])){ echo 'images\profile\\'.$_SESSION['prof_img'];} else{ echo 'images\profile\\'."default.jpg"; }?>" alt="img" style="width: 100%;height: 100%"></figure>
                             </div>
                         </div>
                     </div>
@@ -38,58 +43,20 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                <div class="plants-box">
-                    <figure><img src="/images/plant1.jpg" alt="img"/></figure>
-                    <h3> First Name <br>Last Name</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
-                    <a class="btn btn-lg btn-primary" href="message/" role="button" style="max-width: 200px">send a message</a>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                <div class="plants-box">
-                    <figure><img src="/images/plant2.jpg" alt="img"/></figure>
-                    <h3> First Name <br>Last Name</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
-                    <a class="btn btn-lg btn-primary" href="message/" role="button" style="max-width: 200px">send a message</a>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                <div class="plants-box">
-                    <figure><img src="/images/plant3.jpg" alt="img"/></figure>
-                    <h3> First Name <br>Last Name</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
-                    <a class="btn btn-lg btn-primary" href="message/" role="button" style="max-width: 200px">send a message</a>
-
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                <div class="plants-box">
-                    <figure><img src="/images/plant1.jpg" alt="img"/></figure>
-                    <h3> First Name <br>Last Name</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
-                    <a class="btn btn-lg btn-primary" href="message/" role="button" style="max-width: 200px">send a message</a>
-
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                <div class="plants-box">
-                    <figure><img src="/images/plant2.jpg" alt="img"/></figure>
-                    <h3> First Name <br>Last Name</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
-                    <a class="btn btn-lg btn-primary" href="message/" role="button" style="max-width: 200px">send a message</a>
-
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                <div class="plants-box">
-                    <figure><img src="/images/plant3.jpg" alt="img"/></figure>
-                    <h3> First Name <br>Last Name</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
-                    <a class="btn btn-lg btn-primary" href="message/" role="button" style="max-width: 200px">send a message</a>
-
-                </div>
-            </div>
+            <?php if (count($users) >0 ) {
+                foreach ($users as $user) {
+                    if(isset($_SESSION['user_id']) && $user->id == $_SESSION['user_id']){
+                        continue;
+                    }?>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="plants-box">
+                            <figure><img src="<?php if(isset($user->prof_img) && file_exists('images\profile\\'.$user->prof_img)){ echo 'images\profile\\'.$user->prof_img;} else{ echo "images\profile\default.jpg"; }?>" alt="img" style="height: 200px"></figure>
+                            <h3><?php echo $user->first_name ?><br><?php echo $user->last_name ?></h3>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+                            <a class="btn btn-lg btn-primary" href="message<?php echo'?id='.$user->id?>" role="button" style="max-width: 200px">send a message</a>
+                        </div>
+                    </div>
+                <?php } } ?>
         </div>
     </div>
 </div>
@@ -267,5 +234,3 @@
             </div>
         </div>
     </div>
-    <!-- end contact -->
-    <!-- footer -->

@@ -21,7 +21,7 @@ class Account extends Model {
 
 
     public function login($email, $password) {
-        $row = $this->select()->where(['email' => $email])->single();
+        $row = $this->select()->where(['email' => $email])->fetch_accoc();
 
         if ($row) {
             $hashedPassword = $row["password"];
@@ -31,7 +31,6 @@ class Account extends Model {
                 return false;
             }
         }
-        //debug($row);
         return false;
     }
 

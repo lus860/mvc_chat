@@ -30,7 +30,6 @@ class Router {
             foreach ($item_query as $val) {
                 $param = explode("=", $val);
                 $_GET[$param[0]] = $param[1];
-
             }
         }
         foreach ($this->routes as $route => $params) {

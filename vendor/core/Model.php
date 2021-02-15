@@ -17,7 +17,6 @@ abstract class Model {
     {
         $config = CONFIG_DB;
         $this->db = new PDO('mysql:host='.$config['host'].';dbname='.$config['name'].'', $config['user'], $config['password']);
-        //$this->table = lcfirst($route["controller"])."s";
         $this->table = $this->getTable();
 	}
 
@@ -39,15 +38,14 @@ abstract class Model {
         $valuesArray = [];
         if (!empty($data)) {
             foreach ($data as $field => $value) {
-                $fieldsArray[] = "$field";
+                $fieldsArray[] = "`$field`";
                 $valuesArray[] = ":$field";
             }
             $fieldsStr = implode(',', $fieldsArray);
             $valuesStr = implode(',', $valuesArray);
             $this->sql = "INSERT INTO  $this->table ($fieldsStr) VALUES ($valuesStr)";
             $this->stmt = $this->db->prepare($this->sql);
-
-            $this->stmt->execute($data);
+            return $this->stmt->execute($data);
         }
 
 
@@ -80,21 +78,21 @@ abstract class Model {
 
     }
 
-    public function where($conditions = 1)
+    public function where($conditions = 1, $or = null)
     {
         $condStr = 1;
         if (is_array($conditions)) {
             $condArr = [];
             foreach ($conditions as $field => $value) {
-                $condArr[] = "$field = '$value'";
+                $condArr[] = "`$field` = \"$value\"";
             }
-            $condStr = implode(' AND ',$condArr);
+
+            $condStr = $or ? implode(' OR ',$condArr):implode(  " AND "   ,$condArr);
         }
 
         if ($this->selectFlag) {
 
             $this->sql .= " WHERE $condStr";
-
         } else {
 
             $this->sql = " WHERE $condStr";
@@ -166,13 +164,13 @@ abstract class Model {
         return $this->stmt->fetchColumn();
     }
 
-    public function resultSet() {
+    public function fetch_obj() {
         $this->get();
         return $this->stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
     //Return a specific row as an object
-    public function single() {
+    public function fetch_accoc() {
         $this->get();
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
     }

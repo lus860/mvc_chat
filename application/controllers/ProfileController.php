@@ -51,7 +51,7 @@ class ProfileController extends Controller {
                     $user->setTable('accounts');
                     $findUser = $user->find($_SESSION['user_id']);
                     $oldImg = $findUser['prof_img'];
-                    if(file_exists(self::path['profile'].'\\'.$oldImg)){
+                    if($oldImg && file_exists(self::path['profile'].'\\'.$oldImg)){
                         unlink(self::path['profile'].'\\'.$oldImg);
                     }
                     $user->where(['id' => $_SESSION['user_id']])->update(['prof_img'=> $file_name]);
@@ -62,11 +62,17 @@ class ProfileController extends Controller {
                     return $this->view->render('profile.index','Edit Profile', ['errors' => $errors]);
                 }
             } else {
-                $errors[] = 'Image not found...!!!';
-                return $this->view->render('profile.index','Edit Profile', ['errors' => $errors]);
-            }
+                $_SESSION['errors'] = array('mess' => 'Image not found...!!!', 'registered' => time());            }
+                $this->view->redirect('/profile');
         }
 
+    }
+
+    public function albumAction(){
+        $accounts = new Account();
+        $accounts->setTable('accounts');
+        $users = $accounts->select()->fetch_obj();
+        return $this->view->render('profile.album.index','Edit Profile',['users'=>$users]);
 
     }
 

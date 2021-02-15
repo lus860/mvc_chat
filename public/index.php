@@ -1,6 +1,7 @@
 <?php
 include_once "../configs/constants.php";
 $db = include_once "../configs/db.php";
+
 define("CONFIG_DB",$db);
 include_once VENDOR."App.php";
 session_start();
