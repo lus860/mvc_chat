@@ -2,29 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9efe2f86-8f55-405e-ac1e-94368056ffbb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/views/profile/album/create.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/profile/album/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/acl/account.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/acl/home.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/acl/message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/acl/profile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/include/alert.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/new_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/AccountController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/MessageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/MessageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Account.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Message.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/layouts/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/layouts/default.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/main/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/main/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/message/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/message/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/profile/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Message.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/profile/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/profile/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/profile/1613086461.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/acl/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/configs/acl/message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/profile/1613037319322.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/profile/1613115292.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/profile/1613115406.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/profile/1613121526.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/profile/1613130114.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/core/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/core/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/core/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/core/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/core/View.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +51,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Codeigniter" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -211,7 +207,32 @@
       <workItem from="1613379990528" duration="595000" />
       <workItem from="1613382748328" duration="2319000" />
       <workItem from="1613385126427" duration="2028000" />
-      <workItem from="1613387201443" duration="996000" />
+      <workItem from="1613387201443" duration="1688000" />
+      <workItem from="1613389018192" duration="1806000" />
+      <workItem from="1613403527558" duration="2330000" />
+      <workItem from="1613407410901" duration="598000" />
+      <workItem from="1613414637097" duration="1772000" />
+      <workItem from="1613416448223" duration="1777000" />
+      <workItem from="1613418263942" duration="1795000" />
+      <workItem from="1613420112199" duration="955000" />
+      <workItem from="1613422187338" duration="1816000" />
+      <workItem from="1613424055096" duration="1782000" />
+      <workItem from="1613426069323" duration="580000" />
+      <workItem from="1613459910800" duration="1642000" />
+      <workItem from="1613461750244" duration="1770000" />
+      <workItem from="1613463560041" duration="1773000" />
+      <workItem from="1613465406710" duration="1761000" />
+      <workItem from="1613467208009" duration="1772000" />
+      <workItem from="1613469034432" duration="1770000" />
+      <workItem from="1613470845222" duration="1774000" />
+      <workItem from="1613472661274" duration="1772000" />
+      <workItem from="1613489746965" duration="1622000" />
+      <workItem from="1613491755486" duration="3415000" />
+      <workItem from="1613495317194" duration="1767000" />
+      <workItem from="1613497361071" duration="1761000" />
+      <workItem from="1613499177106" duration="1819000" />
+      <workItem from="1613501422637" duration="2624000" />
+      <workItem from="1613504101023" duration="691000" />
     </task>
     <servers />
   </component>

@@ -8,7 +8,7 @@ use vendor\core\Model;
 
 class Message extends Model {
 
-    public function selectChat($id){
+    public function selectChat($id) {
 
         $user_first = $this->select()
             ->where(['from' => $_SESSION['user_id'], 'to' => $id])
@@ -20,17 +20,16 @@ class Message extends Model {
         return array_merge($user_first, $user_second);
     }
 
+    public function updateStatus($id) {
+        $this->where(['from' => $id, 'to' => $_SESSION['user_id']])
+            ->update(['status'=>1]);
+    }
+
     public function interlocutor($id) {
         $user = new Account();
         $user->setTable('accounts');
         return $user->find($id);
 
     }
-
-    public function createChat($data) {
-        return $user->insert($data);
-
-    }
-
 
 }

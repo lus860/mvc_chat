@@ -1,7 +1,3 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
 <div class="container emp-profile" style="margin-top: 150px;margin-bottom: 50px!important;">
     <?php if(isset($errors)) {
@@ -11,13 +7,6 @@
         <?php echo $error ?>
     </div>
     <?php } }?>
-    <?php if(isset($_SESSION['errors'])) {?>
-        <div class="alert alert-danger" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <?php echo $_SESSION['errors']['mess'] ?>
-        </div>
-    <?php  }?>
-
     <form action="<?php echo URL_ROOT.'/profile/edit'?>" method="POST" enctype="multipart/form-data" >
         <div class="row">
             <div class="col-md-4">

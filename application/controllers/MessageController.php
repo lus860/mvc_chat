@@ -11,6 +11,7 @@ class MessageController extends Controller {
 
         $id = $_GET['id'];
         $interlocutor = $this->model->interlocutor($id);
+        $this->model->updateStatus($id);
         $chat = $this->model->selectChat($id);
         $chatNew = [];
 
@@ -38,7 +39,25 @@ class MessageController extends Controller {
 
             echo json_encode($res);
         } else {
-            echo 0;
+            $res = [
+                'success'=> false,
+            ];
+            echo json_encode($res);
+        }
+
+    }
+
+    public function notificationAction()
+    {
+        $notification = $this->model->select()
+            ->join("messages.from = accounts.id", $join = 'INNER', 'accounts')
+            ->where(['to' => $_SESSION['user_id'], 'status' => 0])
+            ->group_by ('from')
+            ->fetch_obj();
+        if ( $notification ) {
+            echo json_encode($notification);
+        } else {
+            echo 'error';
         }
 
     }

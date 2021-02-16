@@ -51,7 +51,7 @@ class ProfileController extends Controller {
                     $user->setTable('accounts');
                     $findUser = $user->find($_SESSION['user_id']);
                     $oldImg = $findUser['prof_img'];
-                    if($oldImg && file_exists(self::path['profile'].'\\'.$oldImg)){
+                    if ($oldImg && file_exists(self::path['profile'].'\\'.$oldImg)) {
                         unlink(self::path['profile'].'\\'.$oldImg);
                     }
                     $user->where(['id' => $_SESSION['user_id']])->update(['prof_img'=> $file_name]);

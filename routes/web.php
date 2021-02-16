@@ -47,4 +47,10 @@ return [
         'action' => 'createChat',
     ],
 
+    'message/notification' => [
+        'controller' => 'message',
+        'action' => 'notification',
+    ],
+
+
 ];

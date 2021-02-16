@@ -6,7 +6,9 @@ return [
 
     ],
     'guest' => [
-
+        'index',
+        'createChat',
+        //'notification'
     ],
 
 ];

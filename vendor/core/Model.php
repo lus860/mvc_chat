@@ -93,11 +93,13 @@ abstract class Model {
         if ($this->selectFlag) {
 
             $this->sql .= " WHERE $condStr";
+
         } else {
 
             $this->sql = " WHERE $condStr";
 
         }
+
         return $this;
     }
 
@@ -106,6 +108,18 @@ abstract class Model {
         if (!$b) { $this->sql .= " LIMIT $a";
         }
         else { $this->sql .= " LIMIT $a, $b"; }
+        return $this;
+    }
+
+    public function group_by ($name)
+    {
+        $this->sql .= " GROUP BY `$name`";
+        return $this;
+    }
+
+    public function join($connection, $join = 'INNER', $table)
+    {
+        $this->sql = ' '.$this->sql.' '. $join.' JOIN '. $table. ' ON '. $connection;
         return $this;
     }
 
@@ -135,12 +149,11 @@ abstract class Model {
         $this->selectFlag = false;
         $condArr1 = [];
         foreach ($data1 as $field => $value) {
-            $condArr1[] = "$field='$value'";
+            $condArr1[] = "`$field` = \"$value\"";
         }
         $condStr1 = implode(' , ',$condArr1);
 
-        $this->sql = "UPDATE $this->table SET $condStr1". "$this->sql";
-
+        $this->sql = "UPDATE $this->table SET $condStr1". $this->sql;
         $this->get();
 
     }

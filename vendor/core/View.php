@@ -6,6 +6,7 @@ class View {
 
 	public $path;
 	public $route;
+	public $alert;
 	public $layout = DEFAULT_LAYOUT;
 
 
@@ -23,11 +24,13 @@ class View {
         extract($vars);
 
         $this->path = VIEWS.implode(DIRECTORY_SEPARATOR,explode('.',$view)).".php";
+        $this->alert = VIEWS.DIRECTORY_SEPARATOR.'include'.DIRECTORY_SEPARATOR."alert.php";
 
 		if (file_exists($this->path)) {
 			ob_start();
 			require $this->path;
-			$content = ob_get_clean();
+            //require $this->alert;
+            $content = ob_get_clean();
 			require LAYOUTS.$this->layout.'.php';
 		}
 	}
