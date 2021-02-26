@@ -90,9 +90,9 @@
                             <nav class="main-menu">
                                 <ul class="menu-area-main">
                                     <li class="active"> <a href="/">Home</a> </li>
-                                    <li> <a href="#about">About</a> </li>
-                                    <li><a href="#gallery">Album</a></li>
-                                    <li><a href="#plant">All profile</a></li>
+                                    <li> <a href="/#about">About</a> </li>
+                                    <li><a href="/#gallery">Album</a></li>
+                                    <li><a href="/#plant">All profile</a></li>
 <!--                                    <li><a href="#contact">Contact Us</a></li>-->
                                     <?php
                                     if (isset($_SESSION['user_id'])) {?>
@@ -255,6 +255,7 @@
                             var new_mess = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg">'+ img +'</div><div class="msg_cotainer">'+message+'<span class="msg_time" id="msg_time">'+ JSON.parse(d).time +'</span></div></div>';
                             $('#msg_card_body').append($(new_mess ));
                             $("#message").val(' ');
+                            $("#msg_card_body").animate({ scrollTop: $("#msg_card_body")[0].scrollHeight }, 1000);
                             console.log(d)
                         }
 

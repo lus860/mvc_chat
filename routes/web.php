@@ -7,6 +7,7 @@ return [
         'action' => DEFAULT_ACTION,
     ],
 
+    // AccountController
     'account/login' => [
         'controller' => 'account',
         'action' => 'login',
@@ -22,6 +23,7 @@ return [
         'action' => 'logout',
     ],
 
+    // ProfileController
     'profile' => [
         'controller' => 'profile',
         'action' => 'index',
@@ -36,6 +38,8 @@ return [
         'controller' => 'profile',
         'action' => 'album',
     ],
+
+    // MessageController
 
     'message' => [
         'controller' => 'message',
@@ -52,26 +56,58 @@ return [
         'action' => 'notification',
     ],
 
+    // AlbumController
+//    'album/create' => [
+//        'controller' => 'profile',
+//        'action' => 'albumCreate',
+//    ],
+//
+//    'album' => [
+//        'controller' => 'profile',
+//        'action' => 'album',
+//    ],
+//
+//    'album/add' => [
+//        'controller' => 'profile',
+//        'action' => 'albumAdd',
+//    ],
+//
+//    'albumUser' => [
+//        'controller' => 'profile',
+//        'action' => 'albumUser',
+//    ],
+//
+//    'albumImage/delete' => [
+//        'controller' => 'profile',
+//        'action' => 'imageDelete',
+//    ],
+
     'album/create' => [
-        'controller' => 'profile',
+        'controller' => 'album',
         'action' => 'albumCreate',
     ],
 
     'album' => [
-        'controller' => 'profile',
+        'controller' => 'album',
         'action' => 'album',
     ],
 
     'album/add' => [
-        'controller' => 'profile',
+        'controller' => 'album',
         'action' => 'albumAdd',
     ],
 
-    'image/delete' => [
-        'controller' => 'profile',
+    'albumUser' => [
+        'controller' => 'album',
+        'action' => 'albumUser',
+    ],
+
+    'albumImage/delete' => [
+        'controller' => 'album',
         'action' => 'imageDelete',
     ],
 
+    // MaliController
     'mali/send' => [
         'controller' => 'profile',
         'action' => 'sendMail',

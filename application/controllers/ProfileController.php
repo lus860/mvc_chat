@@ -13,51 +13,6 @@ class ProfileController extends Controller {
         'profile' => IMAGES.'profile',
     ];
 
-    public function image() {
-
-            $errors = array();
-            $error_extensions = 0;
-            $error_size = 0;
-            if (isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
-                $file_name = $_FILES['image']['name'];
-                $file_size = $_FILES['image']['size'];
-                $file_tmp = $_FILES['image']['tmp_name'];
-                $file_type = $_FILES['image']['type'];
-                $file_ext = explode('.', $_FILES['image']['name']);
-                $file_ext = strtolower(end($file_ext));
-
-                $extensions = array("jpeg","jpg","png");
-
-                if (in_array($file_ext,$extensions) === false) {
-                    $error_extensions++;
-                    $mess = 'Extension is prohibited on'. $error_extensions .'files. Select a JPEG, PNG, or JPG file.';
-                    $errors['error_extensions'] = $mess;
-
-                }
-
-                if ($file_size > 2097152) {
-                    $error_size ++;
-                    $mess = 'On' . $error_size .'files the size is prohibited. File size must be excately 2 MB';
-                    $errors['error_size'] = $mess;
-
-                }
-
-
-                $file_name = time() . '.' .$file_ext;
-                if (empty($errors) == true) {
-                    if (!is_dir(self::path['album'])) {
-                        mkdir(self::path['album']);
-                    }
-                    move_uploaded_file($file_tmp, self::path['album'].'\\'.$_SESSION['user_id'].'\\'.$file_name);
-                    $album = new Album();
-                    $album->setTable('albums');
-
-                    $album->insert(['user_id' => $_SESSION['user_id'], 'img' => $file_name]);
-                }
-            } else {
-                $_SESSION['errors'] = array('mess' => 'Image not found...!!!', 'registered' => time());            }
-            $this->view->redirect('/profile');
-    }
 
     public function indexAction() {
 
@@ -115,104 +70,8 @@ class ProfileController extends Controller {
 
     }
 
-    public function albumAction() {
-
-        $album = new Album();
-        $album->setTable('albums');
-        $album = $album->select()->where(['user_id' => $_SESSION['user_id']])->fetch_obj();
-        return $this->view->render('profile.album.index','View Album',['album'=>$album]);
-
-    }
-
-
-    public function albumCreateAction() {
-
-        return $this->view->render('profile.album.create','Add Image');
-
-    }
-
-    public function albumAddAction() {
-
-        if (isset($_POST['submit'])) {
-            $count = count($_FILES['image']['name']);
-            if ($count > 0) {
-                $errors = array();
-                $error_extensions = 0;
-                $error_size = 0;
-                $upload = 0;
-                for ($i=0; $i <= $count; $i++) {
-                    $current_error = false;
-                    if (isset($_FILES['image']['name'][$i]) && $_FILES['image']['error'][$i] === 0) {
-                        $file_name = $_FILES['image']['name'][$i];
-                        $file_size = $_FILES['image']['size'][$i];
-                        $file_tmp = $_FILES['image']['tmp_name'][$i];
-                        $file_type = $_FILES['image']['type'][$i];
-                        $file_ext = explode('.', $_FILES['image']['name'][$i]);
-                        $file_ext = strtolower(end($file_ext));
-
-                        $extensions = array("jpeg","jpg","png");
-
-                        if (in_array($file_ext,$extensions) === false) {
-                            $current_error = true;
-                            $error_extensions++;
-                            $mess = 'Extension is prohibited on'. $error_extensions .'files. Select a JPEG, PNG, or JPG file.';
-                            $errors['error_extensions'] = $mess;
-                        }
-
-                        if ($file_size > 2097152) {
-                            $current_error = true;
-                            $error_size ++;
-                            $mess = 'On' . $error_size .'files the size is prohibited. File size must be excately 2 MB';
-                            $errors['error_size'] = $mess;
-                        }
-
-                        $file_name = md5($file_name) . '.' .$file_ext;
-                        if ($current_error == false) {
-                            if (!is_dir(self::path['album'].'/'.$_SESSION['user_id'])) {
-                                mkdir(self::path['album'].'/'.$_SESSION['user_id']);
-                            }
-                            move_uploaded_file($file_tmp, self::path['album'].'/'.$_SESSION['user_id'].'/'.$file_name);
-                            $album = new Album();
-                            $album->setTable('albums');
-
-                            $album->insert(['user_id' => $_SESSION['user_id'], 'img' => $file_name]);
-                            $upload++;
-                        }
-                    }
-                }
-
-                if ($upload > 0) {
-
-                    $_SESSION['success'] = array('mess' => $upload.' file has been uploaded', 'registered' => time());
-                    $this->view->redirect('/album');
-
-                } else {
-
-                    $_SESSION['errors'] = array('mess' => '0 file has been uploaded', 'registered' => time());
-
-                    $this->view->redirect('/album/create');
-                }
-            }
-        }
-    }
-
-    public function imageDeleteAction() {
-
-        $album = new Album();
-        $album->setTable('albums');
-        $findImg = $album->find($_GET['id']);
-        $img = $findImg['img'];
-        $album->where(['id'=> $_GET['id']])->delete();
-        if ($img && file_exists(self::path['album'].'/'.$_SESSION['user_id'].'/'.$img)) {
-            unlink(self::path['album'].'/'.$_SESSION['user_id'].'/'.$img);
-        }
-
-        $this->view->redirect('/album');
-
-    }
 
     public function sendMailAction() {
-
 
         $rules = [
             'name' => ['required','string'],
@@ -237,19 +96,46 @@ class ProfileController extends Controller {
             $error = $this->validation($rules, $data);
 
             if (empty($error)) {
-                $to = 'lusinehovhannisyan280@gmail.com';
-                $headers = "From: webmaster@example.com" . "\r\n" .
-                    "CC: somebodyelse@example.com";
 
-                try {
-                    mail($to, $data['subject'], $data['message'], $headers);
-                    $_SESSION['success'] = array('mess' => 'Mail send', 'registered' => time());
+//                $from = $data['email'];
+//                $to = "lusinehovhannisyan280@gmail.com";
+//                $subject = $data['subject'];
+//                $message = $data['message'];
+//                $headers = "";
+//                $headers.="From: ".$from;
+//                $headers.= "MIME-Version: 1.0\r\n";
+//                $headers.= "Content-type: text/html; charset=UTF-8\r\n";
+//                $mail = mail($to,$subject,$message,$headers);
+//                if ($mail) {
+//                    $_SESSION['success'] = array('mess' => 'Your message has been  successfully sent', 'registered' => time());
+//                    $this->view->redirect('/');
+//                } else {
+//                    $_SESSION['errors_mail'] = array('mess' => $data, 'registered' => time());
+//                    $_SESSION['errors'] = array('mess' => 'Your message has not been sent', 'registered' => time());
+//                    $this->view->redirect('/');
+//                }
 
-                    $this->view->redirect('/');
-                }catch (Exception $e){
-                    $e->getMessage();
+                $mail = new PHPMailer();
 
-                }
+// Settings
+                $mail->IsSMTP();
+                $mail->CharSet = 'UTF-8';
+
+                $mail->Host       = "mail.example.com"; // SMTP server example
+                $mail->SMTPDebug  = 0;                     // enables SMTP debug information (for testing)
+                $mail->SMTPAuth   = true;                  // enable SMTP authentication
+                $mail->Port       = 25;                    // set the SMTP port for the GMAIL server
+                $mail->Username   = "username"; // SMTP account username example
+                $mail->Password   = "password";        // SMTP account password example
+
+// Content
+                $mail->isHTML(true);                                  // Set email format to HTML
+                $mail->Subject = 'Here is the subject';
+                $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+                $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+                $mail->send();
+
 
             }
             $result = array_merge($error, $data);
@@ -260,3 +146,4 @@ class ProfileController extends Controller {
     }
 
 }
+

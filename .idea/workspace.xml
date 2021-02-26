@@ -2,115 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90c8e4ce-b9c8-49ac-92f6-10f9549b58be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/chat.loc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/80854e3f-d0af-4537-826e-947b8c8fe8c9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/80854e3f-d0af-4537-826e-947b8c8fe8c9/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/controllers/AccountController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/controllers/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/controllers/MessageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/controllers/ProfileController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/models/Account.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/models/Album.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/models/Main.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/models/Message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/account/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/account/register.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/errors/403.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/errors/404.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/include/alert.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/layouts/default.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/main/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/message/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/profile/album/create.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/profile/album/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/profile/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/acl/account.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/acl/home.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/acl/message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/acl/profile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/constants.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/db.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/animate.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/jquery-ui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/jquery.mCustomScrollbar.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/meanmenu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/new_style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/nice-select.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/slick.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icon/Twitter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icon/facebook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icon/instagram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icon/linkedin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/about-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/album/30/68d5535b971d558f594f10a5affd0a71.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/album/30/773399897eb40339c2128e8aef728d6d.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/album/30/93e3ce7fd6ff63ce771aa8f512fa7500.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/album/30/9f65cb1338007b71f153f50c856a296a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/album/30/aa9257c3e996b2def03e68f816fad440.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/album/30/be3f743a793afbbf98e9c566f15a3359.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/album/33/6cf0b0bff36492ff1a0ae6fe08e1dcf9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/album/33/84764251fc0f8eac7e38d4efa7320409.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/album/33/9f5b3bef106e8d3c01173db5f39dd6db.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/album/33/9f65cb1338007b71f153f50c856a296a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/album/33/c270eb7dd0e8b6b2e46e7b8efb3a1362.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/album/33/c5be83b96000e865d247c53b3cc81bd5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/album/33/c7f0b98af9f76bcec9ee2e6c39c18fc0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/album\30\1614182282.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/album\30\1614182282.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/contactimg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/map.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profile/1613115550.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profile/1613412940.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profile/1613413014.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profile/1613413088.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profile/1613416583.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profile/1613499565.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profile/1613500017.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profile/1613500162.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profile/1613500214.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profile/1613500546.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profile/1613500623.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profile/1613500742.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profile/1613500782.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profile/1613501009.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profile/1613501091.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profile/1613501283.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profile/1613505349.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profile/default.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery-3.0.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery.mCustomScrollbar.concat.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery.validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/plugin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/App.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/core/Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/core/Model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/core/Router.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/core/View.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/lib/Db.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/lib/Dev.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/AlbumController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/album/albumUser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/album/create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/album/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/acl/album.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/layouts/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/layouts/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/main/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/main/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/acl/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/configs/acl/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/album/30/68d5535b971d558f594f10a5affd0a71.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/album/30/93e3ce7fd6ff63ce771aa8f512fa7500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/album/30/9f65cb1338007b71f153f50c856a296a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/album/30/aa9257c3e996b2def03e68f816fad440.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +86,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/views" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -195,6 +101,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/application/views" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -223,7 +130,9 @@
       <workItem from="1614146731222" duration="7034000" />
       <workItem from="1614164860039" duration="33921000" />
       <workItem from="1614208459370" duration="1133000" />
-      <workItem from="1614237223478" duration="375000" />
+      <workItem from="1614237223478" duration="2896000" />
+      <workItem from="1614244131642" duration="5293000" />
+      <workItem from="1614262231663" duration="10936000" />
     </task>
     <servers />
   </component>

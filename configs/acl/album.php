@@ -6,8 +6,9 @@ return [
 
     ],
     'guest' => [
-        'index',
-        'edit',
+        'albumCreate',
+        'albumAdd',
+        'imageDelete',
     ],
 
 ];

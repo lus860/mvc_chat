@@ -54,7 +54,8 @@
                             <figure><img src="<?php if(isset($user->prof_img) && file_exists('images/profile/'.$user->prof_img)){ echo 'images/profile/'.$user->prof_img;} else{ echo "images/profile/default.jpg"; }?>" alt="img" style="height: 200px"></figure>
                             <h3><?php echo $user->first_name ?><br><?php echo $user->last_name ?></h3>
                             <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
-                            <a class="btn btn-lg btn-primary" href="message<?php echo'?id='.$user->id?>" role="button" style="max-width: 200px">send a message</a>
+                            <a class="btn btn-lg btn-primary" href="message<?php echo'?id='.$user->id?>" role="button" style="padding: 5px;margin-right: 0px!important;">message</a>
+                            <a class="btn btn-lg btn-primary" href="albumUser<?php echo'?id='.$user->id?>" role="button" style="padding: 5px;margin-right: 0px!important;">view album</a>
                         </div>
                     </div>
                 <?php } } ?>
@@ -150,35 +151,35 @@
                             <form method="POST" action="<?php echo URL_ROOT.'/mali/send'?>">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <input class="form-control <?php  if(isset($_SESSION['errors']['mess']['name_error'])) :?> is-invalid <?php endif ?>" placeholder="Name" type="text" name="name" value="<?php if (isset($_SESSION['errors']['mess']['name'])) echo $_SESSION['errors']['mess']['name']  ?>">
-                                        <?php  if (isset($_SESSION['errors']['mess']['name_error'])) :?>
+                                        <input class="form-control <?php  if(isset($_SESSION['errors_mail']['mess']['name_error'])) :?> is-invalid <?php endif ?>" placeholder="Name" type="text" name="name" value="<?php if (isset($_SESSION['errors_mail']['mess']['name'])) echo $_SESSION['errors_mail']['mess']['name']  ?>">
+                                        <?php  if (isset($_SESSION['errors_mail']['mess']['name_error'])) :?>
                                             <span class="text-danger" role="alert">
-                                        <strong><?php echo $_SESSION['errors']['mess']['name_error'] ?></strong>
+                                        <strong><?php echo $_SESSION['errors_mail']['mess']['name_error'] ?></strong>
                                     </span>
                                         <?php endif ?>
                                     </div>
 
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <input class="form-control<?php  if (isset($_SESSION['errors']['mess']['email_error'])) :?> is-invalid <?php endif ?>" placeholder="Email" type="text" name="email" value="<?php if (isset($_SESSION['errors']['mess']['email']) ) echo $_SESSION['errors']['mess']['email'] ?>">
-                                        <?php  if (isset($_SESSION['errors']['mess']['email_error'])) :?>
+                                        <input class="form-control<?php  if (isset($_SESSION['errors_mail']['mess']['email_error'])) :?> is-invalid <?php endif ?>" placeholder="Email" type="text" name="email" value="<?php if (isset($_SESSION['errors_mail']['mess']['email']) ) echo $_SESSION['errors_mail']['mess']['email'] ?>">
+                                        <?php  if (isset($_SESSION['errors_mail']['mess']['email_error'])) :?>
                                             <span class="text-danger" role="alert">
-                                        <strong><?php echo $_SESSION['errors']['mess']['email_error'] ?></strong>
+                                        <strong><?php echo $_SESSION['errors_mail']['mess']['email_error'] ?></strong>
                                     </span>
                                         <?php endif ?>
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <input class="form-control<?php  if (isset($_SESSION['errors']['mess']['subject_error'])) :?> is-invalid <?php endif ?>" placeholder="Subject" type="text" name="subject" value="<?php if (isset($_SESSION['errors']['mess']['subject'])) echo $_SESSION['errors']['mess']['subject']  ?>">
-                                        <?php  if (isset($_SESSION['errors']['mess']['subject_error'])) :?>
+                                        <input class="form-control<?php  if (isset($_SESSION['errors_mail']['mess']['subject_error'])) :?> is-invalid <?php endif ?>" placeholder="Subject" type="text" name="subject" value="<?php if (isset($_SESSION['errors_mail']['mess']['subject'])) echo $_SESSION['errors_mail']['mess']['subject']  ?>">
+                                        <?php  if (isset($_SESSION['errors_mail']['mess']['subject_error'])) :?>
                                             <span class="text-danger" role="alert">
-                                        <strong><?php echo $_SESSION['errors']['mess']['subject_error'] ?></strong>
+                                        <strong><?php echo $_SESSION['errors_mail']['mess']['subject_error'] ?></strong>
                                     </span>
                                         <?php endif ?>
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <textarea class="textarea <?php  if ($_SESSION['errors']['mess']['message_error']) :?> is-invalid <?php endif ?>" placeholder="Message" type="text" name="message" ><?php if (isset($_SESSION['errors']['mess']['message'])) echo $_SESSION['errors']['mess']['message']  ?></textarea>
-                                        <?php  if (isset($_SESSION['errors']['mess']['message_error'])) :?>
+                                        <textarea class="textarea <?php  if ($_SESSION['errors_mail']['mess']['message_error']) :?> is-invalid <?php endif ?>" placeholder="Message" type="text" name="message" ><?php if (isset($_SESSION['errors_mail']['mess']['message'])) echo $_SESSION['errors_mail']['mess']['message']  ?></textarea>
+                                        <?php  if (isset($_SESSION['errors_mail']['mess']['message_error'])) :?>
                                             <span class="text-danger" role="alert">
-                                        <strong><?php echo $_SESSION['errors']['mess']['message_error'] ?></strong>
+                                        <strong><?php echo $_SESSION['errors_mail']['mess']['message_error'] ?></strong>
                                     </span>
                                         <?php endif ?>
                                     </div>
